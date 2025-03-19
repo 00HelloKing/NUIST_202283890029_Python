@@ -1,14 +1,25 @@
 # List
 # Author: Jin Kaifeng
 
-studentNames = ["Lisa", "Liam", "Leo", "Larry", "Linda"]
 
-for name in studentNames:
-    print(f"{name} Evans")
+def studList():
+    studentNames = ["Lisa", "Liam", "Leo", "Larry", "Linda"]
+    # print name + "Evans"
+    for name in studentNames:
+        print(f"{name} Evans")
+    return studentNames
 
-new_name = input("Enter a new name: ")
-studentNames.append(new_name)
+def addToList(studentNames):
+    new_name = input("Enter a new name: ")
+    studentNames.append(new_name)
+    
+    print("Update list：")
+    for name in studentNames:
+        print(f"{name} Evans")
 
-print("update list:")
-for name in studentNames:
-    print(f"{name} Evans")
+# main
+if __name__ == "__main__":
+    studentNames = studList()
+    addToList(studentNames)
+
+
